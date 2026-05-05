@@ -129,15 +129,21 @@ async def auth_google(request: Request, db: Session = Depends(get_db)):
     if not user_info:
         raise HTTPException(status_code=400, detail="Google authentication failed")
     
+    ADMIN_EMAIL = "admin@uniqueclassic.com" # Replace with your email
+    
     user = db.query(models.User).filter(models.User.email == user_info['email']).first()
     if not user:
         user = models.User(
             email=user_info['email'],
             full_name=user_info.get('name'),
             profile_pic=user_info.get('picture'),
-            is_admin=False
+            is_admin=(user_info['email'] == ADMIN_EMAIL)
         )
         db.add(user)
+        db.commit()
+        db.refresh(user)
+    elif user.email == ADMIN_EMAIL and not user.is_admin:
+        user.is_admin = True
         db.commit()
         db.refresh(user)
     

@@ -62,7 +62,7 @@ export default function AdminDashboard() {
           
           <div style={{ display: 'flex', gap: '1rem' }}>
             <div style={{ flex: 1 }}>
-              <label style={{ display: 'block', fontSize: '0.8rem', marginBottom: '0.5rem', textTransform: 'uppercase' }}>Price ($)</label>
+              <label style={{ display: 'block', fontSize: '0.8rem', marginBottom: '0.5rem', textTransform: 'uppercase' }}>Price (₦)</label>
               <input 
                 type="number" 
                 required 

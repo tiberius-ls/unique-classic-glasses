@@ -26,13 +26,13 @@ export default function Home() {
              <img src="/sample-product.png" alt="Glasses" style={{ width: '100%', marginBottom: '1.5rem' }} />
              <h3 className="serif">Silver Clarity</h3>
              <p style={{ color: '#888', fontSize: '0.9rem', marginBottom: '1rem' }}>Medicated Frame</p>
-             <p className="serif" style={{ fontSize: '1.2rem' }}>$180.00</p>
+             <p className="serif" style={{ fontSize: '1.2rem' }}>₦180.00</p>
           </div>
           {/* More placeholders */}
           <div className="glass" style={{ padding: '2rem', textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
              <h3 className="serif">Classic Noir</h3>
              <p style={{ color: '#888', fontSize: '0.9rem', marginBottom: '1rem' }}>Fashion Frame</p>
-             <p className="serif" style={{ fontSize: '1.2rem' }}>$150.00</p>
+             <p className="serif" style={{ fontSize: '1.2rem' }}>₦150.00</p>
              <div style={{ marginTop: '2rem', color: '#ccc' }}>Image coming soon</div>
           </div>
         </div>

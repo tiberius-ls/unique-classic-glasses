@@ -10,8 +10,9 @@ export default function LoginPage() {
     // In a real app, redirect to FastAPI Google Auth endpoint
     // window.location.href = 'http://localhost:8000/login/google';
     
-    // For demo, we'll simulate a successful login
-    login('fake-jwt-token', { email: 'admin@uniqueclassic.com', isAdmin: true });
+    // For demo, we'll simulate a successful login with the admin email
+    const ADMIN_EMAIL = 'admin@uniqueclassic.com'; // User: replace this with your email
+    login('fake-jwt-token', { email: ADMIN_EMAIL, isAdmin: true });
     router.push('/admin');
   };
 
